@@ -10,13 +10,13 @@ let scanner = readline.createInterface({
 	terminal: false
 });
 
-let messages = ["Oh hi", "I help", "wif ur bugs"];
+let outgoing_messages = ["Oh hi", "I help", "wif ur bugs"];
 
 scanner.on("line", (line) => {
 	console.log(`Hub received this message: ${line}`);
-	if (messages.length > 0) {
-		write_to_exe(messages[0]);
-		messages = messages.slice(1);
+	if (outgoing_messages.length > 0) {
+		write_to_exe(outgoing_messages[0]);
+		outgoing_messages = outgoing_messages.slice(1);
 	}
 });
 
